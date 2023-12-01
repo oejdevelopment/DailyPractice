@@ -1,15 +1,11 @@
 function getCount(str) {
   let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (
-      str[i] === "a" ||
-      str[i] === "e" ||
-      str[i] === "i" ||
-      str[i] === "o" ||
-      str[i] === "u"
-    ) {
+
+  for (let char of str) {
+    if ("aeiou".includes(char.toLowerCase())) {
       count++;
     }
   }
+
   return count;
 }
